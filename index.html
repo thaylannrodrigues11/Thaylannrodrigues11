@@ -263,13 +263,12 @@ body.on-cream-slide .icon-btn:hover{ background:var(--gold-500); color:var(--nav
 /* ============================================================
    SLIDE 5 — PROVA REAL (transformação tipográfica)
    ============================================================ */
-.s5-proof{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:26px; min-height:0; text-align:center; }
-.s5-transform{ display:flex; align-items:center; gap:34px; flex-wrap:wrap; justify-content:center; }
-.s5-transform .from{ font-family:var(--font-head); font-weight:600; font-size:46px; color:rgba(255,255,255,.32); text-decoration:line-through; text-decoration-color:rgba(255,255,255,.25); text-decoration-thickness:2px; }
-.s5-transform .arrow{ font-size:32px; color:rgba(255,255,255,.35); }
-.s5-transform .to{ font-family:var(--font-head); font-weight:700; font-size:56px; color:var(--gold-400); }
-.s5-caption{ max-width:620px; font-size:16.5px; line-height:1.6; color:rgba(255,255,255,.72); font-weight:500; }
-.s5-attrib{ font-size:12px; font-weight:700; letter-spacing:.06em; color:rgba(255,255,255,.4); text-transform:uppercase; margin-top:6px; }
+.s5-grid{ flex:1; display:grid; grid-template-columns:repeat(4,1fr); gap:30px; align-content:center; min-height:0; margin-top:6px; }
+.s5-tile{ display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px; }
+.s5-logo{ width:100%; max-width:172px; height:92px; background:#fff; border-radius:14px; display:flex; align-items:center; justify-content:center; padding:14px; box-shadow:0 22px 44px -20px rgba(0,0,0,.55); }
+.s5-logo img{ max-width:100%; max-height:100%; object-fit:contain; display:block; }
+.s5-tile .s5-tag{ font-family:var(--font-head); font-weight:600; font-size:15px; color:var(--gold-400); }
+.s5-tile p{ margin:0; font-size:13px; color:rgba(255,255,255,.62); line-height:1.55; font-weight:500; }
 
 /* ============================================================
    SLIDE 6 — SIMPLES / ROBUSTA (ledger problema→solução)
@@ -465,16 +464,34 @@ body.on-cream-slide .icon-btn:hover{ background:var(--gold-500); color:var(--nav
     <section class="slide on-navy" data-index="4">
       <div class="slide-pad">
         <div class="eyebrow reveal r1"><i></i>Isso já é realidade</div>
-        <h1 class="reveal r2 h-lg" style="margin-top:10px;">Personalização não é uma promessa. <span class="accent">É como construímos o produto.</span></h1>
+        <h1 class="reveal r2 h-lg" style="margin-top:10px;max-width:920px;">Quatro empresas. Quatro operações diferentes. <span class="accent">A mesma plataforma.</span></h1>
 
-        <div class="s5-proof reveal r3">
-          <div class="s5-transform">
-            <span class="from">Empresa</span>
-            <span class="arrow">→</span>
-            <span class="to">Paciente</span>
+        <div class="s5-grid reveal r3">
+          <div class="s5-tile">
+            <div class="s5-logo"><img src="assets/logo-comodiq.webp" alt="ComodiQ"></div>
+            <span class="s5-tag">Bem-estar corporativo B2B</span>
+            <p>Empresas atendidas, implantações e financeiro organizados.</p>
           </div>
-          <p class="s5-caption">No Espaço Singular, a estrutura de cadastro foi adaptada: onde antes existia "Empresa", hoje existe "Paciente". Campos, nomenclaturas e fluxos passaram a falar a língua daquela operação — sem perder a base sólida da plataforma.</p>
-          <div class="s5-attrib">Caso real de implantação — Espaço Singular</div>
+          <div class="s5-tile">
+            <div class="s5-logo"><img src="assets/logo-espaco-singular.webp" alt="Espaço Singular"></div>
+            <span class="s5-tag">Clínica multidisciplinar</span>
+            <p>"Empresa" virou "Paciente" na própria estrutura da plataforma.</p>
+          </div>
+          <div class="s5-tile">
+            <div class="s5-logo"><img src="assets/logo-m3-marcenaria.webp" alt="M3 Marcenaria"></div>
+            <span class="s5-tag">Marcenaria sob encomenda</span>
+            <p>Estoque, propostas e fornecedores em um só lugar.</p>
+          </div>
+          <div class="s5-tile">
+            <div class="s5-logo"><img src="assets/logo-nexus.webp" alt="Nexus"></div>
+            <span class="s5-tag">Recrutamento e seleção</span>
+            <p>Contatos, oportunidades e clientes sob controle.</p>
+          </div>
+        </div>
+
+        <div class="reveal r4 closing">
+          <div class="rule-gold"></div>
+          <p>Quatro negócios diferentes. <b>A mesma plataforma, adaptada a cada um deles.</b></p>
         </div>
       </div>
     </section>
@@ -593,6 +610,8 @@ body.on-cream-slide .icon-btn:hover{ background:var(--gold-500); color:var(--nav
     document.body.classList.toggle('on-cream-slide', !slides[current].classList.contains('on-navy'));
     dots.forEach(function(d, i){ d.classList.toggle('active', i === current); });
     progressFill.style.width = ((current + 1) / total * 100) + '%';
+    var isLast = current === total - 1;
+    counter.style.display = isLast ? 'none' : '';
     counter.textContent = pad(current + 1) + ' / ' + pad(total);
     btnPrev.disabled = current === 0;
     btnNext.disabled = current === total - 1;
