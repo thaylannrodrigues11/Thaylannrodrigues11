@@ -279,16 +279,14 @@ body.on-cream-slide .icon-btn:hover{ background:var(--gold-500); color:var(--nav
 /* ============================================================
    SLIDE 5 — FUNCIONALIDADES
    ============================================================ */
-.s5-body{ flex:1; display:grid; grid-template-columns:198px 1fr; gap:40px; margin-top:20px; min-height:0; align-items:stretch; }
-.s5-photo{ position:relative; border-radius:16px; overflow:hidden; box-shadow:0 30px 60px -25px rgba(3,38,51,.4); border:1px solid rgba(10,40,51,.08); width:198px; justify-self:start; }
-.s5-photo img{ width:100%; height:100%; object-fit:cover; object-position:top; display:block; }
-.s5-photo-cap{ position:absolute; left:0; right:0; bottom:0; background:rgba(3,20,26,.92); color:#fff; font-size:9.5px; font-weight:700; padding:10px 10px; text-align:center; line-height:1.35; white-space:normal; }
-.s5-areas{ display:flex; flex-direction:column; justify-content:space-evenly; }
-.s5-area{ padding:16px 0; border-top:1px solid rgba(10,40,51,.1); display:flex; align-items:baseline; gap:30px; flex-wrap:wrap; }
-.s5-area:first-child{ border-top:none; }
-.s5-area h3{ font-size:16.5px; width:150px; flex:none; color:var(--navy-900); }
-.s5-area p{ margin:0; font-size:14.5px; font-weight:600; color:var(--ink-soft); }
-.s5-foot{ margin-top:16px; font-size:13px; font-weight:700; color:var(--ink-soft); }
+.s5-body{ flex:1; display:flex; flex-direction:column; justify-content:center; margin-top:8px; min-height:0; position:relative; }
+.s5-body::before{ content:""; position:absolute; left:24px; top:8px; bottom:8px; width:1px; background:rgba(10,40,51,.14); }
+.s5-row{ display:grid; grid-template-columns:48px 190px 1fr; align-items:baseline; gap:26px; padding:18px 0; border-bottom:1px solid rgba(10,40,51,.1); }
+.s5-row:last-child{ border-bottom:none; }
+.s5-num{ font-family:var(--font-head); font-weight:700; font-size:15px; color:var(--gold-600); position:relative; z-index:1; }
+.s5-row h3{ font-size:19px; color:var(--navy-900); }
+.s5-row p{ margin:0; font-size:14.5px; font-weight:600; color:var(--ink-soft); }
+.s5-foot{ margin-top:20px; font-size:13px; font-weight:700; color:var(--ink-soft); }
 .s5-foot i{ color:var(--gold-600); font-weight:800; font-style:normal; }
 
 /* ============================================================
@@ -515,17 +513,11 @@ body.on-cream-slide .icon-btn:hover{ background:var(--gold-500); color:var(--nav
         <h1 class="reveal r2 h-xl" style="margin-top:10px;">Tudo o que sua operação precisa, <span class="accent">em um só lugar.</span></h1>
 
         <div class="s5-body reveal r3">
-          <div class="s5-photo">
-            <img src="assets/dashboard-sidebar.webp" alt="Menu real da plataforma In-Pruv" />
-            <span class="s5-photo-cap">Interface real da plataforma In-Pruv</span>
-          </div>
-          <div class="s5-areas">
-            <div class="s5-area"><h3>Comercial</h3><p>Funil comercial · Propostas · Acompanhamentos</p></div>
-            <div class="s5-area"><h3>Clientes</h3><p>Cadastro completo · Histórico de relacionamento · Contratos</p></div>
-            <div class="s5-area"><h3>Gestão</h3><p>Painel de indicadores · Metas e desempenho · Notificações</p></div>
-            <div class="s5-area"><h3>Inteligência</h3><p>Análises inteligentes · Sugestões de próximos passos</p></div>
-            <div class="s5-area"><h3>Operação</h3><p>Financeiro · Estoque e materiais · Atendimento via WhatsApp</p></div>
-          </div>
+          <div class="s5-row"><span class="s5-num">01</span><h3>Comercial</h3><p>Funil comercial · Propostas · Acompanhamentos</p></div>
+          <div class="s5-row"><span class="s5-num">02</span><h3>Clientes</h3><p>Cadastro completo · Histórico de relacionamento · Contratos</p></div>
+          <div class="s5-row"><span class="s5-num">03</span><h3>Gestão</h3><p>Painel de indicadores · Metas e desempenho · Notificações</p></div>
+          <div class="s5-row"><span class="s5-num">04</span><h3>Inteligência</h3><p>Análises inteligentes · Sugestões de próximos passos</p></div>
+          <div class="s5-row"><span class="s5-num">05</span><h3>Operação</h3><p>Financeiro · Estoque e materiais · Atendimento via WhatsApp</p></div>
         </div>
 
         <div class="reveal r4 s5-foot"><i>→</i>&nbsp; Evoluímos a estrutura conforme a necessidade da sua operação.</div>
