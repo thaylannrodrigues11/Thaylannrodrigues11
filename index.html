@@ -263,12 +263,17 @@ body.on-cream-slide .icon-btn:hover{ background:var(--gold-500); color:var(--nav
 /* ============================================================
    SLIDE 5 — PROVA REAL (transformação tipográfica)
    ============================================================ */
-.s5-grid{ flex:1; display:grid; grid-template-columns:repeat(4,1fr); gap:30px; align-content:center; min-height:0; margin-top:6px; }
-.s5-tile{ display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px; }
-.s5-logo{ width:100%; max-width:172px; height:92px; background:#fff; border-radius:14px; display:flex; align-items:center; justify-content:center; padding:14px; box-shadow:0 22px 44px -20px rgba(0,0,0,.55); }
-.s5-logo img{ max-width:100%; max-height:100%; object-fit:contain; display:block; }
-.s5-tile .s5-tag{ font-family:var(--font-head); font-weight:600; font-size:15px; color:var(--gold-400); }
-.s5-tile p{ margin:0; font-size:13px; color:rgba(255,255,255,.62); line-height:1.55; font-weight:500; }
+.s5-grid{ flex:1; display:grid; grid-template-columns:repeat(4,1fr); gap:26px; align-content:center; min-height:0; margin-top:6px; }
+.s5-tile{ display:flex; flex-direction:column; align-items:center; text-align:center; gap:18px; }
+.s5-logo{
+  width:100%; max-width:190px; height:158px; background:linear-gradient(160deg,#fffaf3,#fdf2e3);
+  border-radius:20px; display:flex; align-items:center; justify-content:center; padding:18px;
+  border:1px solid rgba(238,182,63,.4);
+  box-shadow:0 26px 50px -22px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.6);
+}
+.s5-logo img{ max-width:100%; max-height:100%; object-fit:contain; display:block; border-radius:6px; }
+.s5-tile .s5-tag{ font-family:var(--font-head); font-weight:600; font-size:16.5px; color:var(--gold-400); line-height:1.3; }
+.s5-tile p{ margin:0; font-size:14px; color:rgba(255,255,255,.65); line-height:1.55; font-weight:500; }
 
 /* ============================================================
    SLIDE 6 — SIMPLES / ROBUSTA (ledger problema→solução)
@@ -469,23 +474,23 @@ body.on-cream-slide .icon-btn:hover{ background:var(--gold-500); color:var(--nav
         <div class="s5-grid reveal r3">
           <div class="s5-tile">
             <div class="s5-logo"><img src="assets/logo-comodiq.webp" alt="ComodiQ"></div>
-            <span class="s5-tag">Bem-estar corporativo B2B</span>
-            <p>Empresas atendidas, implantações e financeiro organizados.</p>
+            <span class="s5-tag">Operação B2B de serviços e tecnologia</span>
+            <p>Carteira de empresas, ciclo de implantação e financeiro dos contratos organizados.</p>
           </div>
           <div class="s5-tile">
             <div class="s5-logo"><img src="assets/logo-espaco-singular.webp" alt="Espaço Singular"></div>
-            <span class="s5-tag">Clínica multidisciplinar</span>
-            <p>"Empresa" virou "Paciente" na própria estrutura da plataforma.</p>
+            <span class="s5-tag">Operação clínica e gestão de pacientes</span>
+            <p>"Empresa" virou "Paciente" — a lógica do sistema mudou com a operação.</p>
           </div>
           <div class="s5-tile">
             <div class="s5-logo"><img src="assets/logo-m3-marcenaria.webp" alt="M3 Marcenaria"></div>
-            <span class="s5-tag">Marcenaria sob encomenda</span>
-            <p>Estoque, propostas e fornecedores em um só lugar.</p>
+            <span class="s5-tag">Comercial conectado à produção</span>
+            <p>Do orçamento ao estoque: propostas, materiais e execução na mesma base.</p>
           </div>
           <div class="s5-tile">
             <div class="s5-logo"><img src="assets/logo-nexus.webp" alt="Nexus"></div>
-            <span class="s5-tag">Recrutamento e seleção</span>
-            <p>Contatos, oportunidades e clientes sob controle.</p>
+            <span class="s5-tag">Comercial baseado em relacionamento</span>
+            <p>Carteira de empresas e pipeline organizados, sem depender de planilhas.</p>
           </div>
         </div>
 
@@ -551,10 +556,6 @@ body.on-cream-slide .icon-btn:hover{ background:var(--gold-500); color:var(--nav
               <span class="cta-ico"><svg class="ico"><use href="#i-whatsapp"/></svg></span>
               QUERO CONHECER O IN-PRUV
             </a>
-            <div class="reveal r5 phone-row">
-              <svg class="ico mark"><use href="#i-phone"/></svg>
-              <a href="https://wa.me/5511973461275" target="_blank" rel="noopener noreferrer">(11) 97346-1275</a>
-            </div>
           </div>
 
           <div class="reveal r4 s8-qr">
